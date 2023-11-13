@@ -72,7 +72,7 @@ public class RecomendacaoController {
         var listRecomendacao = recomendacaoRepository.findByParceiro(parceiro);
         int start = (int) pageable.getOffset();
         int end = (int) (Math.min((start + pageable.getPageSize()), listRecomendacao.size()));
-        log.info("exibindo todas recomendacoes, nº de elementos:"+listRecomendacao.size()+", nº de elementos na pagina:"+listRecomendacao.subList(start, end).size());
+        log.info("exibindo todas recomendacoes, nº de elementos:"+listRecomendacao.size()+", pagina nº"+pageable.getPageNumber()+", nº de elementos na pagina:"+listRecomendacao.subList(start, end).size());
         return new PageImpl<Recomendacao>(listRecomendacao.subList(start, end), pageable, listRecomendacao.size());
     }
 

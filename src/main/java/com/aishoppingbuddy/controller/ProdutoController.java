@@ -43,7 +43,7 @@ public class ProdutoController {
             @ApiResponse(responseCode = "200", description = "Produtos listados com sucesso"),
             @ApiResponse(responseCode = "403", description = "Token inválido")
     })
-    public PageImpl<Produto> load(@RequestHeader("Authorization") String header, @PageableDefault(size = 15) Pageable pageable) {
+    public PageImpl<Produto> load(@RequestHeader("Authorization") String header, @PageableDefault(size = 5) Pageable pageable) {
         log.info("exibindo todos produtos");
         log.info("buscando funcionario do token");
         var funcionarioResult = tokenService.validate(tokenService.getToken(header));

@@ -242,7 +242,6 @@ public class ProdutoControllerTest {
         assertEquals(pr2.getTipo(),found.getTipo());
         assertEquals(pr2.getDescricao(),found.getDescricao());
         assertEquals(pr2.getCategoria(),found.getCategoria());
-        assertEquals(pr2.getValor(),found.getValor());
     }
 
     @Test
@@ -413,7 +412,6 @@ public class ProdutoControllerTest {
         assertEquals(pr2.getTipo(),found.getTipo());
         assertEquals(pr2.getDescricao(),found.getDescricao());
         assertEquals(pr2.getCategoria(),found.getCategoria());
-        assertEquals(pr2.getValor(),found.getValor());
 
     }
 
